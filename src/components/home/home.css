@@ -1,0 +1,16 @@
+.main-container {
+    display: flex;
+    text-align: center;
+}
+
+.main-container .nav {
+    flex: 10%;
+}
+
+.main-container .main {
+    flex: 70%;
+}
+
+.main-container .section {
+    flex: 20%;
+}

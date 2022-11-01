@@ -1,0 +1,43 @@
+.section {
+    border-left: 1px solid #E0E0E0;
+    position: fixed;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background-color: white;
+}
+
+.contactButton {
+    padding: 10px;
+    width: 180px;
+    background-color: black;
+    border-radius: 20px;
+    font-style: bold;
+    cursor: pointer;
+    border-color: black;
+}
+
+.contactButton:hover {
+    background-color: #5AE59D;
+    color: black;
+    font-style: bold;
+    border-color: #5AE59D;
+}
+
+.social-media-container {
+    margin-top: 10px;
+}
+
+.social-media {
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+}
+
+.logo-social-media {
+    height: 40px;
+}
+
+.logo-social-media:hover {
+    background-color: #5AE59D;
+    border-radius: 50px;
+}
