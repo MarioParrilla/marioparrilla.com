@@ -1,3 +1,4 @@
+import { getTranslation } from "../../services/LangService";
 
 const Section = () => {
     return (
@@ -5,7 +6,7 @@ const Section = () => {
             <div className="mt-10">
                 <a href="mailto:marioparrilla2@gmail.com">
                     <button className='dark:bg-white md:w-32 xl:w-48 dark:text-black dark:hover:bg-green-300 hover:bg-green-300 bg-black text-white rounded-full p-2 font-bold'>
-                        Contact me
+                        {getTranslation('contactMe')}
                     </button>
                 </a>
                 <div className='flex flex-row justify-center mt-2'>
