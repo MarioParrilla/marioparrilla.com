@@ -10,6 +10,20 @@ import jsIcon from './../../assets/js.svg';
 import tsIcon from './../../assets/ts.svg';
 import pyIcon from './../../assets/py.svg';
 import mysqlIcon from './../../assets/mysql.svg';
+import reactIcon from './../../assets/react.svg';
+import csharpIcon from './../../assets/csharp.svg';
+import flutterIcon from './../../assets/flutter.svg';
+import angularIcon from './../../assets/angular.svg';
+import nodejsIcon from './../../assets/node.svg';
+import androidIcon from './../../assets/android.svg';
+import tailwindIcon from './../../assets/tailwindcss.svg';
+import plsqlIcon from './../../assets/plsql.svg';
+import jiraIcon from './../../assets/jira.svg';
+import unityIcon from './../../assets/unity.svg';
+import mavenIcon from './../../assets/maven.svg';
+import cssIcon from './../../assets/css.svg';
+import structuresIcon from './../../assets/structures.svg';
+import algorithmIcon from './../../assets/algorithm.svg';
 
 const Content = () => {
     return (
@@ -23,24 +37,54 @@ const Content = () => {
                 </div>
                 <PersonalCard />
                 <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
-                    {getTranslation('skillsTitle')}
+                    {getTranslation('technologiesTitle')}
                 </h1>
                 <div className='mx-auto'>
                     <div className='flex flex-row flex-wrap space-x-4'>
-
                         <div></div>
-                        <ImageCard icon={javaIcon} alt="java" />
-                        <ImageCard icon={springIcon} alt="spring" />
-                        <ImageCard icon={jsIcon} alt="javascript" />
-                        <ImageCard icon={tsIcon} alt="typescript" />
-                        <ImageCard icon={pyIcon} alt="python" />
-                        <ImageCard icon={mysqlIcon} alt="mysql" />
+                        <ImageCard title='Java' icon={javaIcon} alt="java" />
+                        <ImageCard title='Spring' icon={springIcon} alt="spring" />
+                        <ImageCard title='Javascript' icon={jsIcon} alt="javascript" />
+                        <ImageCard title='Typecript' icon={tsIcon} alt="typescript" />
+                        <ImageCard title='Python' icon={pyIcon} alt="python" />
+                        <ImageCard title='MySql' icon={mysqlIcon} alt="mysql" />
                     </div>
                 </div>
+                <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
+                    {getTranslation('technologies2Title')}
+                </h1>
+                <div className='mx-auto'>
+                    <div className='flex flex-row flex-wrap space-x-4'>
+                        <div></div>
+                        <ImageCard title='React' icon={reactIcon} alt="react" />
+                        <ImageCard title='C#' icon={csharpIcon} alt="csharp" />
+                        <ImageCard title='Flutter' icon={flutterIcon} alt="flutter" />
+                        <ImageCard title='Angular' icon={angularIcon} alt="angular" />
+                        <ImageCard title='NodeJS' icon={nodejsIcon} alt="nodejs" />
+                        <ImageCard title='Maven' icon={mavenIcon} alt="maven" />
+                        <ImageCard title='Android' icon={androidIcon} alt="android" />
+                        <ImageCard title='TailwindCSS' icon={tailwindIcon} alt="tailwindcss" />
+                        <ImageCard title='PLSQL' icon={plsqlIcon} alt="plsql" />
+                        <ImageCard title='Jira' icon={jiraIcon} alt="jira" />
+                        <ImageCard title='Unity' icon={unityIcon} alt="unity" />
+                        <ImageCard title='CSS' icon={cssIcon} alt="css" />
+                    </div>
+                </div>
+                <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
+                    {getTranslation('projects')}
+                </h1>
                 <Buildin />
+                <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
+                    {getTranslation('nextIdeas')}
+                </h1>
+                <div className='flex flex-row flex-wrap space-x-4'>
+                    <div></div>
+                    <ImageCard title='Data Structures +' icon={structuresIcon} alt="Data structures" />
+                    <ImageCard title='Algorithm +' icon={algorithmIcon} alt="Algorithm" />
+                </div>
             </div>
             <Footer />
-        </div>
+        </div >
     );
 };
 
