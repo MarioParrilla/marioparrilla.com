@@ -1,24 +1,10 @@
 import Home from './pages/home/Home';
+import { initLang } from './shared/lang/langService';
+import { defTheme as initTheme } from './shared/theme/themeService';
 
 function App() {
-
-  const defTheme = () => {
-    let theme = localStorage.getItem("theme");
-    if (theme === null) {
-      theme = getThemeSO();
-      localStorage.setItem("theme", theme);
-    }
-    if (theme === 'dark') document.body.classList.add("dark")
-  };
-
-  const getThemeSO = () => {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? 'dark'
-      : 'ligth';
-  };
-
-  defTheme();
-
+  initTheme();
+  initLang();
   return (
     <Home />
   );

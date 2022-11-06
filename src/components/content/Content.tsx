@@ -24,6 +24,11 @@ import mavenIcon from './../../assets/maven.svg';
 import cssIcon from './../../assets/css.svg';
 import structuresIcon from './../../assets/structures.svg';
 import algorithmIcon from './../../assets/algorithm.svg';
+import dockerIcon from './../../assets/docker.svg';
+import snakecoreIcon from './../../assets/snakecore.svg';
+import beChefIcon from './../../assets/bechef.svg';
+import mpIcon from './../../assets/mp_transparente.png';
+import ProjectCard from '../projectCard/ProjectCard';
 
 const Content = () => {
     return (
@@ -51,6 +56,16 @@ const Content = () => {
                     </div>
                 </div>
                 <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
+                    {getTranslation('projects')}
+                </h1>
+                <div className='flex flex-row flex-wrap space-x-4'>
+                    <div></div>
+                    <ProjectCard title='SnakeCore' desc={getTranslation('snakecore')} lang="Java" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/SnakeCore" icon={snakecoreIcon} alt="SnakeCore" />
+                    <ProjectCard title='Website' desc={getTranslation('mpweb')} lang="React" web="https://marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com" icon={mpIcon} alt="mpicon" />
+                    <ProjectCard title='BeChef Backend' desc={getTranslation('bechefback')} lang="Spring Boot" github="https://github.com/MarioParrilla/BeChefBackend" icon={beChefIcon} alt="bechef" />
+                    <ProjectCard title='BeChef App' desc={getTranslation('bechefapp')} lang="Flutter" github="https://github.com/MarioParrilla/BeChef" icon={beChefIcon} alt="bechef" />
+                </div>
+                <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
                     {getTranslation('technologies2Title')}
                 </h1>
                 <div className='mx-auto'>
@@ -71,14 +86,11 @@ const Content = () => {
                     </div>
                 </div>
                 <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
-                    {getTranslation('projects')}
-                </h1>
-                <Buildin />
-                <h1 className='mb-5 font-bold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 animate-text pb-1'>
                     {getTranslation('nextIdeas')}
                 </h1>
                 <div className='flex flex-row flex-wrap space-x-4'>
                     <div></div>
+                    <ImageCard title='Docker' icon={dockerIcon} alt="Docker" />
                     <ImageCard title='Data Structures +' icon={structuresIcon} alt="Data structures" />
                     <ImageCard title='Algorithm +' icon={algorithmIcon} alt="Algorithm" />
                 </div>
