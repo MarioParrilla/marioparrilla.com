@@ -1,38 +1,15 @@
-import Buildin from './components/buildIn/Buildin'
-import snakecoreIcon from '../public/snakecore.svg'
-import GithubIcon from './components/icons/Github'
-import LinkedinIcon from './components/icons/Linkedin'
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
-    <div className='my-auto mx-auto'>
-      <div className='flex flex-row justify-center'>
-        <img className='h-48 m-0' src={snakecoreIcon} alt="Snake Core Icon" />
-        <h1 className='my-auto text-center text-3xl font-bold text-black'>
-          SnakeCore
-        </h1>
-      </div>
-      <Buildin />
-      <div className='flex flex-col p-4 text-center items-center'>
-        <div className="mt-10">
-          <a href="mailto:marioparrilla2@gmail.com">
-            <button className='dark:bg-white hover:shadow-xl shadow-lg dark:shadow-zinc-700 md:w-32 xl:w-48 dark:text-black dark:hover:bg-green-300 hover:bg-yellow-300 bg-black text-white rounded-full p-2 font-bold'>
-              Contact me
-            </button>
-          </a>
-          <div className='flex flex-row justify-center mt-2'>
-            <a className='dark:fill-white m-2 hover:bg-yellow-300 rounded-full' href='https://github.com/MarioParrilla/snakecore' target="_blank" >
-              <GithubIcon size="w-12" />
-            </a>
-            <a className='dark:fill-white m-2 hover:bg-yellow-300 rounded-full' href='https://www.linkedin.com/in/marioparrillamaroto/' target="_blank" >
-              <LinkedinIcon />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
   )
 }
 
 export default App
+
+//la barra de busqueda se le pasa un array de los elementos de la lsita y la posicion para destacar la pos
