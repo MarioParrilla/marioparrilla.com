@@ -6,7 +6,7 @@ const Social = () => {
         <div className='flex flex-col p-4 text-center items-center'>
             <div className="mt-10">
                 <a href="mailto:marioparrilla2@gmail.com">
-                    <button className='dark:bg-white hover:shadow-xl shadow-lg dark:shadow-zinc-700 md:w-32 xl:w-48 dark:text-black dark:hover:bg-green-300 hover:bg-yellow-300 bg-black text-white rounded-full p-2 font-bold'>
+                    <button className='dark:bg-white md:w-32 xl:w-48 dark:text-black dark:hover:bg-green-300 hover:bg-yellow-300 bg-black text-white hover:text-black rounded-full p-2 font-bold'>
                         Contact me
                     </button>
                 </a>

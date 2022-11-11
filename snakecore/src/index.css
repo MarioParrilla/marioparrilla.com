@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .hiddenMenu {
+        display: none;
+    }
+    
+    .showMenu {
+        display: block;
+    }
+}
