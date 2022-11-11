@@ -5,12 +5,12 @@ import downArrow from '../../assets/down_arrow.svg';
 
 const HiddenMenu = (data: { features: [Feature] }) => {
     return (
-        <div className='fixed h-screen bg-white w-screen hiddenMenu mt-16' id='openMenu'>
+        <div className='fixed h-screen dark:bg-zinc-900 bg-white w-screen hiddenMenu mt-16' id='openMenu'>
             {data.features.map(f => {
                 return (
                     <>
                         <div className='flex flex-row'>
-                            <p className='pl-4 text-lg font-bold text-black'>
+                            <p className='pl-4 text-lg font-bold text-black dark:text-white'>
                                 {f.featureTitle}
                             </p>
                             <img className='w-3 mt-1' src={downArrow} alt="downarrow" />
@@ -20,14 +20,14 @@ const HiddenMenu = (data: { features: [Feature] }) => {
                                     return (
                                         s.sectionName === f.activeSectionName
                                             ? <Link to={s.href}><li key={s.sectionName} className='bg-yellow-300 text-black font-bold rounded-tr-xl rounded-br-xl p-2 pl-6'>{s.sectionName}</li></Link>
-                                            : <Link to={s.href}><li key={s.sectionName} className='text-black rounded-tr-xl font-bold rounded-br-xl p-2 pl-6 hover:bg-slate-100 '>{s.sectionName}</li></Link>
+                                            : <Link to={s.href}><li key={s.sectionName} className='text-black dark:text-white rounded-tr-xl font-bold rounded-br-xl p-2 pl-6 hover:bg-slate-100 dark:hover:bg-zinc-800'>{s.sectionName}</li></Link>
                                     );
                                 })}
                             </ul>
                             {
                                 f.featureTitle !== 'Home'
                                     ? <Link to={"/"}>
-                                        <button className='dark:bg-white dark:text-black dark:hover:bg-green-300 hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
+                                        <button className='dark:bg-white dark:text-black hover:bg-yellow-300 dark:hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
                                             Back to Home
                                         </button>
                                     </Link>

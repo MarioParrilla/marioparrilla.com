@@ -3,6 +3,7 @@ import Guide from "./pages/Guide";
 import Home from "./pages/Home"
 import Installation from "./pages/Installation";
 import Usage from "./pages/Usage";
+import { initTheme } from "./shared/theme/themeService";
 import { Section } from "./types/section";
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
   const sectionsInstallation: Array<Section> = [{ sectionName: 'Overview', href: '/installation' }];
   const sectionsUsage: Array<Section> = [{ sectionName: 'Overview', href: '/usage' }, { sectionName: 'Auto configuration', href: '/usage/autoconfig' }, { sectionName: 'Manual configuration', href: '/usage/manualconfig' }];
   const sectionsGuide: Array<Section> = [{ sectionName: 'Overview', href: '/guide' }];
+
+  initTheme()
 
   return (
     <Routes>

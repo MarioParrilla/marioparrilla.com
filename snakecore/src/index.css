@@ -11,3 +11,25 @@
         display: block;
     }
 }
+
+@layer base {
+    *::-webkit-scrollbar {
+        background-color: transparent;
+        z-index: -1;
+        width: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.511);
+        border-radius: 10px;
+        width: 2px;
+    }
+    
+    .dark::-webkit-scrollbar-thumb {
+        background: rgb(225, 225, 225);
+        border-radius: 10px;
+        width: 2px;
+    }
+
+
+}
