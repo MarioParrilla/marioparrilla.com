@@ -31,16 +31,16 @@ const Menu = () => {
                     <button onClick={openMenu}>
                         {hamburger}
                     </button>
-                    <Link to='/' className='flex flex-row'>
+                    <Link to='/' className='flex flex-row justify-center'>
                         <img className='h-16 m-0' src={snakecoreIcon} alt="Snake Core Icon" />
                         <h1 className='my-auto text-center text-xl pb-1 font-bold text-black dark:text-white'>
                             SnakeCore
                         </h1>
                         <Tag ttile='0.1.3' />
-                        <button className="ml-2 w-10  dark:hover:bg-zinc-700 hover:bg-zinc-400 rounded-full my-5" onClick={changeThemeMode}>
-                            {moon}
-                        </button>
                     </Link>
+                    <button className="ml-2 w-10 pb-1.5 dark:hover:bg-zinc-700 hover:bg-zinc-400 rounded-full my-5" onClick={changeThemeMode}>
+                        {moon}
+                    </button>
                 </div>
             </div>
         </div>
