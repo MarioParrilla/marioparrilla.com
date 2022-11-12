@@ -4,8 +4,20 @@ import Social from "../social/Social";
 import downArrow from '../../assets/down_arrow.svg';
 
 const HiddenMenu = (data: { features: [Feature] }) => {
+
+    const arrow = <svg className="fill-black dark:fill-white mt-1.5" width="20" height="20">
+        <g transform="translate(-446 -398)">
+            <path d=" M95.8838835,240.366117 C95.3957281,239.877961 94.6042719,239.877961 94.1161165,240.366117 C93.6279612,240.854272
+    93.6279612,241.645728 94.1161165,242.133883 L98.6161165,246.633883 C99.1042719,247.122039
+    99.8957281,247.122039 100.383883,246.633883 L104.883883,242.133883 C105.372039,241.645728
+    105.372039,240.854272 104.883883,240.366117 C104.395728,239.877961 103.604272,239.877961
+    103.116117,240.366117 L99.5,243.982233 L95.8838835,240.366117 Z" transform="translate(356.5 164.5)">
+            </path>
+        </g>
+    </svg >
+
     return (
-        <div className='fixed h-screen dark:bg-zinc-900 bg-white w-screen hiddenMenu mt-16' id='openMenu'>
+        <div className='fixed h-screen dark:bg-zinc-900 bg-white w-screen hiddenMenu mt-20' id='openMenu'>
             {data.features.map(f => {
                 return (
                     <>
@@ -13,7 +25,7 @@ const HiddenMenu = (data: { features: [Feature] }) => {
                             <p className='pl-4 text-lg font-bold text-black dark:text-white'>
                                 {f.featureTitle}
                             </p>
-                            <img className='w-3 mt-1' src={downArrow} alt="downarrow" />
+                            {arrow}
                         </div><div className=''>
                             <ul key={f.featureTitle} className='list-none mr-2'>
                                 {f.sections.map(s => {

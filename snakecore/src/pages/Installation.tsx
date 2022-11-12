@@ -14,21 +14,21 @@ const Installation = (data: { features: [Feature] }) => {
             <div className='flex-auto flex flex-col max-h-screen overflow-y-scroll bg-white dark:bg-zinc-900'>
                 <Menu />
                 <div className='flex flex-col md:px-20 lg:px-20 xl:px-40 sm:px-5 max-sm:px-5'>
-                    <h1 className='pt-5 pb-5 text-6xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
+                    <h1 className='pt-5 pb-5 sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
                         Installation
                     </h1>
                     <h1 className='my-auto text-3xl pb-1 font-bold text-black dark:text-white'>
                         Maven
                     </h1>
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        <ShowCode lang='xml' code={CodeExampleService.getCodeExample({ id: 'maven' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
+                        <ShowCode lang='xml' title='pom.xml' code={CodeExampleService.getCodeExample({ id: 'maven' })} />
                     </div>
                     <br />
                     <h1 className='my-auto text-3xl pb-1 font-bold text-black dark:text-white'>
                         Gradle
                     </h1>
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        <ShowCode lang='gradle' code={CodeExampleService.getCodeExample({ id: 'gradle' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
+                        <ShowCode lang='gradle' title='build.gradle' code={CodeExampleService.getCodeExample({ id: 'gradle' })} />
                     </div>
                     <br />
                     <h3 className='text-yellow-300 hover:text-black bg-black hover:bg-yellow-300 text-sm pb-1 font-bold w-44 text-center pt-1 rounded-[5px]'>

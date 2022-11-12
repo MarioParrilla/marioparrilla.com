@@ -25,12 +25,13 @@ const Home = (data: { features: [Feature] }) => {
                     <h1 className='sm:text-4xl md:text-5xl lg:text-6xl text-center pb-2 text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
                         SnakeCore an Inversion of control Container Library made to learn.
                     </h1>
-                    <div className='flex flex-col flex-wrap justify-center gap-1 m-5'>
+                    <div className='flex flex-col flex-wrap justify-center m-5'>
                         <div className='max-sm:w-[100%]'>
-                            <ShowCode lang='java' code={CodeExampleService.getCodeExample({ id: 'javaHome1' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
+                            <ShowCode lang='java' title='Cest.java' code={CodeExampleService.getCodeExample({ id: 'javaHome1' })} />
                         </div>
+                        <br />
                         <div className='max-sm:w-[100%]'>
-                            <ShowCode lang='java' code={CodeExampleService.getCodeExample({ id: 'javaHome2' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
+                            <ShowCode lang='java' title='Dependency.java' code={CodeExampleService.getCodeExample({ id: 'javaHome2' })} />
                         </div>
                     </div>
                 </div>

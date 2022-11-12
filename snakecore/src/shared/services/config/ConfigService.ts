@@ -72,15 +72,126 @@ public class Cest {
 
 
     CodeExampleService.addCodeExample({
-        id: 'showInitManualConfig', example: `public class Main {
+        id: 'showMainManualConfig', example: `public class Main {
+    @OpenEgg
+    static Car car;
     public static void main(String[] args) throws Exception {
         ApplicationContext context = SnakeApplication
                 .init(Main.class)
                 .registerCestEggsClass(new Class[] {Cest.class})
-                .classesToScan(new Class[] {Car.class, Engine.class, Wheels.class})
+                .classesToScan(new Class[] {Main.class, Car.class, Engine.class, Wheel.class})
                 .run();
+        System.out.println(car.toString());
     }
 }`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showCestManualConfig', example: `public class Cest {
+    @Egg
+    public Wheel getWheel0() {
+        return new Wheel();
+    }
+
+    @Egg(name = "michelin")
+    public Wheel getWheel1() {
+        return new Wheel("Michelin");
+    }
+
+    @Egg
+    public Engine getEngine() {
+        return new Engine("Audi");
+    }
+
+    @Egg
+    public Car getCar() {
+        return new Car();
+    }
+
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showCarManualConfig', example: `public class Car {
+    @OpenEgg(name = "michelin")
+    private Wheel wheel1;
+
+    @OpenEgg
+    private Wheel wheel2;
+
+    @OpenEgg(name = "michelin")
+    private Wheel wheel3;
+
+    @OpenEgg
+    private Wheel wheel4;
+
+    @OpenEgg
+    private Engine engine;
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "wheel1=" + wheel1 +
+                ", wheel2=" + wheel2 +
+                ", wheel3=" + wheel3 +
+                ", wheel4=" + wheel4 +
+                ", engine=" + engine +
+                '}';
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showEngineManualConfig', example: `public class Engine {
+    private String brand;
+
+    public Engine(String brandName) {
+        this.brand = brandName;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "brand='" + brand + '\'' +
+                '}';
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showWheelManualConfig', example: `public class Wheel {
+    private String brand;
+
+    public Wheel() {
+        this.brand = "No Brand";
+    }
+
+    public Wheel(String brandName) {
+        this.brand = brandName;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    @Override
+    public String toString() {
+        return "Wheel{" +
+                "brand='" + brand + '\'' +
+                '}';
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showInitOutputManualConfig', example: `[main] INFO com.marioparrilla.snake.context.SnakeApplication - Creating the eggs
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were created
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were opened
+Car{wheel1=Wheel{brand='Michelin'}, wheel2=Wheel{brand='No Brand'}, wheel3=Wheel{brand='Michelin'}, wheel4=Wheel{brand='No Brand'}, engine=Engine{brand='Audi'}}`
     });
 }
 
