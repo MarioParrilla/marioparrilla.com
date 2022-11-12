@@ -1,20 +1,11 @@
 import Nav from '../components/nav/Nav';
 import { Feature } from '../types/feature';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import HiddenMenu from '../components/hidden-menu/HiddenMenu';
 import Menu from '../components/menu/Menu';
+import ShowCode from '../components/show-code/ShowCode';
+import CodeExampleService from '../shared/services/code-examples/CodeExampleService';
 
 const Installation = (data: { features: [Feature] }) => {
-    const currentVersion = '0.1.3';
-
-    const maven = `<dependency>
-    <groupId>io.github.marioparrilla</groupId>
-    <artifactId>snake-core</artifactId>
-    <version>${currentVersion}</version>
-</dependency>`;
-
-    const gradle = `implementation 'io.github.marioparrilla:snake-core:${currentVersion}'`;
 
     return (
         <div className='flex flex-row h-screen bg-white dark:bg-zinc-900'>
@@ -30,18 +21,14 @@ const Installation = (data: { features: [Feature] }) => {
                         Maven
                     </h1>
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        <SyntaxHighlighter customStyle={{ borderRadius: '5px', backgroundColor: 'black' }} language="xml" style={atomOneDark} showLineNumbers={true} wrapLines={true} wrapLongLines={false}>
-                            {maven}
-                        </SyntaxHighlighter>
+                        <ShowCode lang='xml' code={CodeExampleService.getCodeExample({ id: 'maven' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
                     </div>
                     <br />
                     <h1 className='my-auto text-3xl pb-1 font-bold text-black dark:text-white'>
                         Gradle
                     </h1>
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        <SyntaxHighlighter customStyle={{ borderRadius: '5px', backgroundColor: 'black' }} language="gradle" style={atomOneDark} showLineNumbers={true} wrapLines={true} wrapLongLines={false}>
-                            {gradle}
-                        </SyntaxHighlighter>
+                        <ShowCode lang='gradle' code={CodeExampleService.getCodeExample({ id: 'gradle' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
                     </div>
                     <br />
                     <h3 className='text-yellow-300 hover:text-black bg-black hover:bg-yellow-300 text-sm pb-1 font-bold w-44 text-center pt-1 rounded-[5px]'>

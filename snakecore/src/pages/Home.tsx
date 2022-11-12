@@ -1,50 +1,13 @@
 import Nav from '../components/nav/Nav';
 import snakecoreIcon from '../../public/snakecore.svg';
 import { Feature } from '../types/feature';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Tag from '../components/tag/Tag';
 import Menu from '../components/menu/Menu';
 import HiddenMenu from '../components/hidden-menu/HiddenMenu';
+import ShowCode from '../components/show-code/ShowCode';
+import CodeExampleService from '../shared/services/code-examples/CodeExampleService';
 
 const Home = (data: { features: [Feature] }) => {
-    const javaExample = `@Cest
-public class Cest {
-
-    @Egg
-    public Dependency getDependency() {
-        return new Dependency();
-    }
-
-    @Egg(name = "43uha")
-    public String getIdString() {
-        return "43uha";
-    }
-
-    @Egg(name = "Example")
-    public Example getExample() {
-        return new Example("Example");
-    }
-}`;
-
-    const javaExample2 = `public class Dependency {
-
-        @OpenEgg(name = "Example")
-        Example example;
-    
-        public void sayHello() {
-            example.sayHello();
-        }
-    
-        @Override
-        public String toString() {
-            return "Dependency{" +
-                    "example=" + example +
-                    '}';
-        }
-    }
-    
-    `;
     return (
         <div className='flex flex-row h-screen bg-white dark:bg-zinc-900'>
             <Nav features={data.features} />
@@ -64,14 +27,10 @@ public class Cest {
                     </h1>
                     <div className='flex flex-col flex-wrap justify-center gap-1 m-5'>
                         <div className='max-sm:w-[100%]'>
-                            <SyntaxHighlighter customStyle={{ borderRadius: '5px', backgroundColor: 'black' }} language="gradle" style={atomOneDark} showLineNumbers={true} wrapLines={true} wrapLongLines={false}>
-                                {javaExample}
-                            </SyntaxHighlighter>
+                            <ShowCode lang='java' code={CodeExampleService.getCodeExample({ id: 'javaHome1' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
                         </div>
                         <div className='max-sm:w-[100%]'>
-                            <SyntaxHighlighter customStyle={{ borderRadius: '5px', backgroundColor: 'black' }} language="gradle" style={atomOneDark} showLineNumbers={true} wrapLines={true} wrapLongLines={false}>
-                                {javaExample2}
-                            </SyntaxHighlighter>
+                            <ShowCode lang='java' code={CodeExampleService.getCodeExample({ id: 'javaHome2' })} customStyles={{ borderRadius: '5px', backgroundColor: 'black' }} />
                         </div>
                     </div>
                 </div>
