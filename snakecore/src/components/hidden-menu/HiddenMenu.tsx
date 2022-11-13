@@ -3,7 +3,7 @@ import { Feature } from "../../types/feature";
 import Social from "../social/Social";
 import downArrow from '../../assets/down_arrow.svg';
 
-const HiddenMenu = (data: { features: [Feature] }) => {
+const HiddenMenu = (data: { features: Array<Feature> }) => {
 
     const arrow = <svg className="fill-black dark:fill-white mt-1.5" width="20" height="20">
         <g transform="translate(-446 -398)">
@@ -17,7 +17,7 @@ const HiddenMenu = (data: { features: [Feature] }) => {
     </svg >
 
     return (
-        <div className='fixed h-screen dark:bg-zinc-900 bg-white w-screen hiddenMenu mt-20' id='openMenu'>
+        <div className='fixed h-screen dark:bg-zinc-900 bg-white w-screen hiddenMenu mt-20 overflow-y-scroll' id='openMenu'>
             {data.features.map(f => {
                 return (
                     <>
@@ -36,20 +36,20 @@ const HiddenMenu = (data: { features: [Feature] }) => {
                                     );
                                 })}
                             </ul>
-                            {
-                                f.featureTitle !== 'Home'
-                                    ? <Link to={"/"}>
-                                        <button className='dark:bg-white dark:text-black hover:bg-yellow-300 dark:hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
-                                            Back to Home
-                                        </button>
-                                    </Link>
-                                    : null
-                            }
-                            <Social />
                         </div>
                     </>
                 );
             })}
+            {
+                data.features[0].featureTitle !== 'Home'
+                    ? <Link to={"/"}>
+                        <button className='dark:bg-white dark:text-black hover:bg-yellow-300 dark:hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
+                            Back to Home
+                        </button>
+                    </Link>
+                    : null
+            }
+            <Social />
         </div>
     );
 }

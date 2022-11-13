@@ -4,7 +4,7 @@ import HiddenMenu from '../components/hidden-menu/HiddenMenu';
 import Menu from '../components/menu/Menu';
 import Buildin from '../components/buildIn/Buildin';
 
-const Guide = (data: { features: [Feature] }) => {
+const Guide = (data: { features: Array<Feature> }) => {
     return (
         <div className='flex flex-row h-screen bg-white dark:bg-zinc-900'>
             <Nav features={data.features} />

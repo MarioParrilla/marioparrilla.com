@@ -10,10 +10,53 @@ const init = () => {
 }
 
 const initSections = () => {
-    SectionService.addSection({ id: 'home', section: [{ sectionName: 'Welcome', href: '/' }, { sectionName: 'Installation', href: '/installation' }, { sectionName: 'Usage', href: '/usage' }, { sectionName: 'Guide', href: '/guide' }] });
-    SectionService.addSection({ id: 'installation', section: [{ sectionName: 'Overview', href: '/installation' }] });
-    SectionService.addSection({ id: 'usage', section: [{ sectionName: 'Overview', href: '/usage' }, { sectionName: 'Auto configuration', href: '/usage/autoconfig' }, { sectionName: 'Manual configuration', href: '/usage/manualconfig' }] });
-    SectionService.addSection({ id: 'guide', section: [{ sectionName: 'Overview', href: '/guide' }] });
+    SectionService.addSection({
+        id: 'home', section: [
+            { sectionName: 'Welcome', href: '/' },
+            { sectionName: 'Installation', href: '/installation' },
+            { sectionName: 'Usage', href: '/usage' },
+            { sectionName: 'Guide', href: '/guide' },
+        ]
+    });
+    SectionService.addSection({
+        id: 'installation', section: [
+            { sectionName: 'Overview', href: '/installation' },
+        ]
+    });
+    SectionService.addSection({
+        id: 'usage', section: [
+            { sectionName: 'Overview', href: '/usage' },
+            { sectionName: 'Auto configuration', href: '/usage/autoconfig' },
+            { sectionName: 'Manual configuration', href: '/usage/manualconfig' },
+        ]
+    });
+    SectionService.addSection({
+        id: 'guide', section: [
+            { sectionName: 'Overview', href: '/guide' },
+        ]
+    });
+    SectionService.addSection({
+        id: 'functions', section: [
+            { sectionName: 'init()', href: '/guide/functions/init' },
+            { sectionName: 'run()', href: '/guide/functions/run' },
+            { sectionName: 'registerCestEggsClass()', href: '/guide/functions/registercesteggsclass' },
+            { sectionName: 'classesToScan()', href: '/guide/functions/classestoscan' },
+            { sectionName: 'enableTrace()', href: '/guide/functions/enabletrace' },
+            { sectionName: 'getAllEggs()', href: '/guide/functions/getalleggs' },
+            { sectionName: 'getEgg()', href: '/guide/functions/getegg' },
+            { sectionName: 'containsEgg()', href: '/guide/functions/containsegg' },
+        ]
+    });
+    SectionService.addSection({
+        id: 'annotations', section: [
+            { sectionName: '@Egg', href: '/guide/annotations/egg' },
+            { sectionName: '@OpenEgg', href: '/guide/annotations/openegg' },
+            { sectionName: '@Cest', href: '/guide/annotations/cest' },
+            { sectionName: '@AutoConfig', href: '/guide/annotations/autoconfig' },
+            { sectionName: '@CustomConstructor', href: '/guide/annotations/customconstructor' },
+            { sectionName: '@CustomParam', href: '/guide/annotations/customparam' },
+        ]
+    });
 }
 
 const initCodeExamples = () => {

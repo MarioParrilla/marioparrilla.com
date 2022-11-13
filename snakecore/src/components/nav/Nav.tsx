@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Feature } from '../../types/feature';
 import Tag from '../tag/Tag';
 
-const Nav = (data: { features: [Feature] }) => {
+const Nav = (data: { features: Array<Feature> }) => {
 
     const changeThemeMode = () => {
         document.body.classList.toggle("dark")
@@ -61,20 +61,20 @@ const Nav = (data: { features: [Feature] }) => {
                                         );
                                     })}
                                 </ul>
-                                {
-                                    f.featureTitle !== 'Home'
-                                        ? <Link to={"/"}>
-                                            <button className='dark:bg-white dark:text-black hover:bg-yellow-300 dark:hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
-                                                Back to Home
-                                            </button>
-                                        </Link>
-                                        : null
-                                }
-                                <Social />
                             </div>
                         </>
                     );
                 })}
+                {
+                    data.features[0].featureTitle !== 'Home'
+                        ? <Link to={"/"}>
+                            <button className='dark:bg-white dark:text-black hover:bg-yellow-300 dark:hover:bg-yellow-300 bg-black text-white hover:text-black rounded-tr-xl rounded-br-xl p-2 font-bold'>
+                                Back to Home
+                            </button>
+                        </Link>
+                        : null
+                }
+                <Social />
             </div>
         </div >
     );
