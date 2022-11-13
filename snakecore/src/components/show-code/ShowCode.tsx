@@ -13,7 +13,7 @@ interface Data {
 const ShowCode = (data: Data) => {
     return (
         <div className='flex flex-col'>
-            <h1 className=' text-white dark:text-black font-bold bg-zinc-900 dark:bg-white rounded-t-lg pl-5 border-[1px] border-zinc-700'>
+            <h1 className='text-white dark:text-black font-bold bg-zinc-900 dark:bg-white rounded-t-lg pl-5 border-[1px] border-zinc-700'>
                 {data.title}
             </h1>
             <SyntaxHighlighter language={data.lang} style={atomOneDark} showLineNumbers={data.showLineNumbers ?? true} wrapLines={true} wrapLongLines={data.wrapLongLine ?? false}>

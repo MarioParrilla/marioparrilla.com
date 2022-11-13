@@ -3,6 +3,7 @@ import { Feature } from '../types/feature';
 import Menu from '../components/menu/Menu';
 import HiddenMenu from '../components/hidden-menu/HiddenMenu';
 import Buildin from '../components/buildIn/Buildin';
+import { Link } from 'react-router-dom';
 
 const Usage = (data: { features: [Feature] }) => {
     return (
@@ -16,7 +17,15 @@ const Usage = (data: { features: [Feature] }) => {
                         Usage
                     </h1>
                     <br />
-                    <Buildin />
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
+                        <p className='text-xl text-black dark:text-white'>
+                            In SnakeCore we have two ways to setup our context: {<Link to='/usage/manualconfig' className='font-bold inline hover:text-yellow-600'>Manual Configuration</Link>} or {<Link to='/usage/autoconfig' className='font-bold inline hover:text-yellow-600'>Auto Configuration</Link>}.
+                            <br />
+                            Personally I recommend use Auto configuration because with it you can use the manual features too.
+                            <br />
+                            If you are looking for know what does each of the differents features o functions of Snakecore, you can take a look to our <Link to='/guide' className='font-bold inline hover:text-yellow-600'>Guide</Link>.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div >

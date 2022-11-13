@@ -3,13 +3,10 @@ import SectionService from "../sections/SectionService";
 import { initTheme } from "../theme/ThemeService";
 
 export const currentVersion = '0.1.3';
-
 const init = () => {
-
     initTheme();
     initSections();
     initCodeExamples();
-
 }
 
 const initSections = () => {
@@ -190,6 +187,56 @@ public class Cest {
     CodeExampleService.addCodeExample({
         id: 'showInitOutputManualConfig', example: `[main] INFO com.marioparrilla.snake.context.SnakeApplication - Creating the eggs
 [main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were created
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were opened
+Car{wheel1=Wheel{brand='Michelin'}, wheel2=Wheel{brand='No Brand'}, wheel3=Wheel{brand='Michelin'}, wheel4=Wheel{brand='No Brand'}, engine=Engine{brand='Audi'}}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showMainAutoConfig', example: `@AutoConfig
+public class Main {
+    @OpenEgg
+    static Car car;
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+        System.out.println(car.toString());
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showCestAutoConfig', example: `@Cest
+public class CestClass {
+
+    @Egg
+    public Wheel getWheel0() {
+        return new Wheel();
+    }
+
+    @Egg(name = "michelin")
+    public Wheel getWheel1() {
+        return new Wheel("Michelin");
+    }
+
+    @Egg
+    public Engine getEngine() {
+        return new Engine("Audi");
+    }
+
+    @Egg
+    public Car getCar() {
+        return new Car();
+    }
+
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'showInitOutputAutoConfig', example: `[main] INFO com.marioparrilla.snake.context.SnakeApplication - Auto registering cest eggs
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - Creating the eggs
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were created
+[main] INFO com.marioparrilla.snake.context.SnakeApplication - Auto registering eggs
 [main] INFO com.marioparrilla.snake.context.SnakeApplication - All eggs were opened
 Car{wheel1=Wheel{brand='Michelin'}, wheel2=Wheel{brand='No Brand'}, wheel3=Wheel{brand='Michelin'}, wheel4=Wheel{brand='No Brand'}, engine=Engine{brand='Audi'}}`
     });
