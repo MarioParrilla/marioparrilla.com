@@ -15,7 +15,7 @@ const Guide = (data: { features: Array<Feature> }) => {
                         Guide
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
                         <p className='text-xl text-black dark:text-white'>
                             Here you will find a more in-depth explanation of all SnakeCore elements.
                         </p>

@@ -5,7 +5,6 @@ import Menu from '../../../components/menu/Menu';
 import ShowCode from '../../../components/show-code/ShowCode';
 import CodeExampleService from '../../../shared/services/code-examples/CodeExampleService';
 import { Link } from 'react-router-dom';
-import Buildin from '../../../components/buildIn/Buildin';
 
 const Egg = (data: { features: Array<Feature> }) => {
     return (
@@ -21,13 +20,17 @@ const Egg = (data: { features: Array<Feature> }) => {
                         }
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        {/* <p className='text-xl text-black dark:text-white'>
-                            This function through an array with the classes that are the {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>} of {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application are registered in this.
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
+                        <p className='text-xl text-black dark:text-white'>
+                            This annotation say to the context that this {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Egg</Link>} need to be created in the context.
+                            If the context already have one {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Egg</Link>} with the same class or type and you register other again the last will be the unique registered.
+                            <br />
+                            To register all egg, you need to set the unique name to each of these {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>}.
                         </p>
                         <br />
-                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'registerCest()' })} /> */}
-                        <Buildin />
+                        <ShowCode lang='java' title='CestClass.java' code={CodeExampleService.getCodeExample({ id: '@eggCest' })} />
+                        <br />
+                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: '@eggMain' })} />
                     </div>
                 </div>
             </div>

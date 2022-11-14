@@ -19,7 +19,7 @@ const Init = (data: { features: Array<Feature> }) => {
                         }
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
                         <p className='text-xl text-black dark:text-white'>
                             This function is like the factory of the SnakeApplication. In this function you need to put the main class of the application.
                         </p>

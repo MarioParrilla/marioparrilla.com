@@ -5,7 +5,6 @@ import Menu from '../../../components/menu/Menu';
 import ShowCode from '../../../components/show-code/ShowCode';
 import CodeExampleService from '../../../shared/services/code-examples/CodeExampleService';
 import { Link } from 'react-router-dom';
-import Buildin from '../../../components/buildIn/Buildin';
 
 const OpenEgg = (data: { features: Array<Feature> }) => {
     return (
@@ -21,13 +20,15 @@ const OpenEgg = (data: { features: Array<Feature> }) => {
                         }
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        {/* <p className='text-xl text-black dark:text-white'>
-                            This function through an array with the classes that are the {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>} of {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application are registered in this.
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
+                        <p className='text-xl text-black dark:text-white'>
+                            Through of this annotation we are saying to the context that we need a dependency injection in the variable. Without name, the context will inject the {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Egg</Link>} that have not name,
+                            but with name, will search one {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Egg</Link>} with the same name.
                         </p>
                         <br />
-                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'registerCest()' })} /> */}
-                        <Buildin />
+                        <ShowCode lang='java' title='Car.java' code={CodeExampleService.getCodeExample({ id: '@openEggCar' })} />
+                        <br />
+                        <ShowCode lang='java' title='CestClass.java' code={CodeExampleService.getCodeExample({ id: '@eggCest' })} />
                     </div>
                 </div>
             </div>

@@ -5,7 +5,6 @@ import Menu from '../../../components/menu/Menu';
 import ShowCode from '../../../components/show-code/ShowCode';
 import CodeExampleService from '../../../shared/services/code-examples/CodeExampleService';
 import { Link } from 'react-router-dom';
-import Buildin from '../../../components/buildIn/Buildin';
 
 const ClassesToScan = (data: { features: Array<Feature> }) => {
     return (
@@ -21,13 +20,14 @@ const ClassesToScan = (data: { features: Array<Feature> }) => {
                         }
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
-                        {/* <p className='text-xl text-black dark:text-white'>
-                            This function through an array with the classes that are the {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>} of {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application are registered in this.
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
+                        <p className='text-xl text-black dark:text-white'>
+                            This function through an array with the classes that we want to be scanned to open the {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>}.
+                            <br />
+                            Previously, if you have not a {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>}, this context will throw an error, because the context can not open these {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>}.
                         </p>
                         <br />
-                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'registerCest()' })} /> */}
-                        <Buildin />
+                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'classesToScan()' })} />
                     </div>
                 </div>
             </div>

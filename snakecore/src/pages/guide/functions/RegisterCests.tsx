@@ -20,7 +20,7 @@ const RegisterCests = (data: { features: Array<Feature> }) => {
                         }
                     </h1>
                     <br />
-                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
                         <p className='text-xl text-black dark:text-white'>
                             This function through an array with the classes that are the {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>} of {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application are registered in this.
                         </p>

@@ -96,6 +96,117 @@ public class Main {
     });
 
     CodeExampleService.addCodeExample({
+        id: 'classesToScan()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .classesToScan(new Class[] {Main.class, Car.class, Engine.class, Wheel.class})
+                .run();
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'enableTrace()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .enableTrace()
+                .run();
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'getAllEggs()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+        Object[] eggs = context.getAllEggs();
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'getEgg()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+        Object egg = context.getEgg("Audi"); //Will return type Object because have not a Class to convert.
+        Engine egg = context.getEgg(Engine.class); //Will return type of the Class gived and will return the first instance of this class in the context.
+        Engine egg = context.getEgg("Audi", Engine.class); //Will return the egg with the name and class gived.
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'containEgg()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+        boolean egg = context.containEgg("Audi");
+        boolean egg = context.containEgg(Engine.class);
+        boolean egg = context.containEgg("Audi", Engine.class);
+    }
+}`
+    });
+
+
+    CodeExampleService.addCodeExample({
+        id: '@eggCest', example: `@Cest
+public class CestClass {
+    @Egg
+    public Wheel getWheel0() {
+        return new Wheel();
+    }
+
+    @Egg(name = "michelin")
+    public Wheel getWheel1() {
+        return new Wheel("Michelin");
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: '@eggMain', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+        Wheel wheel0 = context.getEgg(Wheel.class);
+        Wheel wheel1 = context.getEgg("Michelin", Wheel.class);
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: '@openEggCar', example: `public class Car {
+    @OpenEgg(name = "michelin")
+    private Wheel wheel1;
+
+    @OpenEgg
+    private Wheel wheel2;
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "wheel1=" + wheel1 +
+                ", wheel2=" + wheel2 +
+                '}';
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
         id: 'showMainManualConfig', example: `public class Main {
     @OpenEgg
     static Car car;
