@@ -61,7 +61,8 @@ const Content = () => {
                 <div className='flex flex-row flex-wrap space-x-4'>
                     <div></div>
                     <ProjectCard title='SnakeCore' desc={getTranslation('snakecore')} lang="Java" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/SnakeCore" icon={snakecoreIcon} alt="SnakeCore" />
-                    <ProjectCard title='Website' desc={getTranslation('mpweb')} lang="React" web="https://marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com" icon={mpIcon} alt="mpicon" />
+                    <ProjectCard title='SnakeCore Website' desc={getTranslation('mpweb')} lang="React" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/snakecore" icon={snakecoreIcon} alt="SnakeCore" />
+                    <ProjectCard title='Website' desc={getTranslation('mpweb')} lang="React" web="https://marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/marioparrilla" icon={mpIcon} alt="mpicon" />
                     <ProjectCard title='BeChef Backend' desc={getTranslation('bechefback')} lang="Spring Boot" github="https://github.com/MarioParrilla/BeChefBackend" icon={beChefIcon} alt="bechef" />
                     <ProjectCard title='BeChef App' desc={getTranslation('bechefapp')} lang="Flutter" github="https://github.com/MarioParrilla/BeChef" icon={beChefIcon} alt="bechef" />
                 </div>

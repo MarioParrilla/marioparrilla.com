@@ -5,7 +5,7 @@ import Tag from "../tag/Tag";
 const ProjectCard = (data: { icon: string; desc: string; lang: string; web?: string; github: string; alt: string; title: string; }) => {
 
     return (
-        <div className='flex flex-col dark:hover:shadow-zinc-500 space-y-1 hover:shadow-lg shadow-md dark:shadow-zinc-700 rounded-2xl border mb-5 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white bg-white min-[320px]:h-80 md:h-96 lg:h-80 min-[320px]:w-32 md:w-40 lg:w-56 px-2'>
+        <div className='flex flex-col space-y-1 shadow-md dark:shadow-zinc-700 rounded-2xl border mb-5 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white bg-white min-[320px]:h-80 md:h-96 lg:h-80 min-[320px]:w-32 md:w-40 lg:w-56 px-2'>
             <div className="mt-2">
                 <Tag text={data.lang} />
             </div>

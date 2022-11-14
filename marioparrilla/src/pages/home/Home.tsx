@@ -6,7 +6,7 @@ import BottomBar from '../../components/bottomBar/BottomBar';
 const Home = () => {
     return (
         <div>
-            <div className="flex flex-row h-screen font-sans dark:bg-zinc-900">
+            <div className="flex flex-row font-sans dark:bg-zinc-900">
                 <Nav />
                 <Content />
                 <Section />

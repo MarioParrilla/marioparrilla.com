@@ -24,7 +24,7 @@ const Cest = (data: { features: Array<Feature> }) => {
                         <p className='text-xl text-black dark:text-white'>
                             Through of this annotation we can say to the Auto configure application, that this class its a Cest and here will recover all or some {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application.
                         </p>
-                        <p className='text-sm font-bold'>Disclaimer: We know that 'cest' in English does not mean basket, but is an original word of this Library.</p>
+                        <p className='text-sm font-bold text-black dark:text-white'>Disclaimer: We know that 'cest' in English does not mean basket, but is an original word of this Library.</p>
                         <br />
                         <ShowCode lang='java' title='CestClass.java (in AutoConfig Application)' code={CodeExampleService.getCodeExample({ id: '@eggCest' })} />
                     </div>
