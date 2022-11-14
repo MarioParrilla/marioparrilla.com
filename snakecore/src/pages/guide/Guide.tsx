@@ -1,8 +1,7 @@
-import Nav from '../components/nav/Nav';
-import { Feature } from '../types/feature';
-import HiddenMenu from '../components/hidden-menu/HiddenMenu';
-import Menu from '../components/menu/Menu';
-import Buildin from '../components/buildIn/Buildin';
+import Nav from '../../components/nav/Nav';
+import { Feature } from '../../types/feature';
+import HiddenMenu from '../../components/hidden-menu/HiddenMenu';
+import Menu from '../../components/menu/Menu';
 
 const Guide = (data: { features: Array<Feature> }) => {
     return (
@@ -16,7 +15,11 @@ const Guide = (data: { features: Array<Feature> }) => {
                         Guide
                     </h1>
                     <br />
-                    <Buildin />
+                    <div className='w-[50%] sm:w-[100%] max-sm:w-[100%]'>
+                        <p className='text-xl text-black dark:text-white'>
+                            Here you will find a more in-depth explanation of all SnakeCore elements.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div >

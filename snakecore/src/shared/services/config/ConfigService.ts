@@ -61,44 +61,6 @@ const initSections = () => {
 
 const initCodeExamples = () => {
     CodeExampleService.addCodeExample({
-        id: 'javaHome1', example: `@Cest
-public class Cest {
-    @Egg
-    public Dependency getDependency() {
-        return new Dependency();
-    }
-
-    @Egg(name = "43uha")
-    public String getIdString() {
-        return "43uha";
-    }
-
-    @Egg(name = "Example")
-    public Example getExample() {
-        return new Example("Example");
-    }
-}`
-    });
-
-    CodeExampleService.addCodeExample({
-        id: 'javaHome2', example: `public class Dependency {
-    @OpenEgg(name = "Example")
-    Example example;
-
-    public void sayHello() {
-        example.sayHello();
-    }
-
-    @Override
-    public String toString() {
-        return "Dependency{" +
-                "example=" + example +
-                '}';
-    }
-}`
-    });
-
-    CodeExampleService.addCodeExample({
         id: 'maven', example: `<dependency>
     <groupId>io.github.marioparrilla</groupId>
     <artifactId>snake-core</artifactId>
@@ -110,6 +72,28 @@ public class Cest {
         id: 'gradle', example: `implementation 'io.github.marioparrilla:snake-core:${currentVersion}'`
     });
 
+    CodeExampleService.addCodeExample({
+        id: 'init()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .run();
+    }
+}`
+    });
+
+    CodeExampleService.addCodeExample({
+        id: 'registerCest()', example: `@AutoConfig
+public class Main {
+    public static void main(String[] args) throws Exception {
+        ApplicationContext context = SnakeApplication
+                .init(Main.class)
+                .registerCestEggsClass(new Class[] {Cest.class})
+                .run();
+    }
+}`
+    });
 
     CodeExampleService.addCodeExample({
         id: 'showMainManualConfig', example: `public class Main {

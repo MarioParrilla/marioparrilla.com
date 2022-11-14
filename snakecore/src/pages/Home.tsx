@@ -27,11 +27,11 @@ const Home = (data: { features: [Feature] }) => {
                     </h1>
                     <div className='flex flex-col flex-wrap justify-center m-5'>
                         <div className='max-sm:w-[100%]'>
-                            <ShowCode lang='java' title='Cest.java' code={CodeExampleService.getCodeExample({ id: 'javaHome1' })} />
+                            <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'showMainAutoConfig' })} />
                         </div>
                         <br />
                         <div className='max-sm:w-[100%]'>
-                            <ShowCode lang='java' title='Dependency.java' code={CodeExampleService.getCodeExample({ id: 'javaHome2' })} />
+                            <ShowCode lang='java' title='Cest.java' code={CodeExampleService.getCodeExample({ id: 'showCestAutoConfig' })} />
                         </div>
                     </div>
                 </div>

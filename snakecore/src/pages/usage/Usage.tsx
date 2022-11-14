@@ -1,8 +1,8 @@
-import Nav from '../components/nav/Nav';
-import { Feature } from '../types/feature';
-import Menu from '../components/menu/Menu';
-import HiddenMenu from '../components/hidden-menu/HiddenMenu';
-import Buildin from '../components/buildIn/Buildin';
+import Nav from '../../components/nav/Nav';
+import { Feature } from '../../types/feature';
+import Menu from '../../components/menu/Menu';
+import HiddenMenu from '../../components/hidden-menu/HiddenMenu';
+import Buildin from '../../components/buildIn/Buildin';
 import { Link } from 'react-router-dom';
 
 const Usage = (data: { features: [Feature] }) => {
