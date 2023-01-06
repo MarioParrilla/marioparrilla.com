@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Tag from "../tag/Tag";
 import snakecoreIcon from '../../../public/snakecore.svg';
+import { currentVersion } from "../../shared/services/config/ConfigService";
 
 const Menu = () => {
     const hamburger = <svg className='my-auto ml-5 w-6 dark:stroke-white' viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -36,7 +37,7 @@ const Menu = () => {
                         <h1 className='my-auto text-center text-xl pb-1 font-bold text-black dark:text-white'>
                             SnakeCore
                         </h1>
-                        <Tag ttile='0.1.3' />
+                        <Tag ttile={currentVersion} />
                     </Link>
                     <button className="ml-2 w-10 pb-1.5 dark:hover:bg-zinc-700 hover:bg-zinc-400 rounded-full my-5" onClick={changeThemeMode}>
                         {moon}

@@ -4,7 +4,6 @@ import HiddenMenu from '../../../components/hidden-menu/HiddenMenu';
 import Menu from '../../../components/menu/Menu';
 import ShowCode from '../../../components/show-code/ShowCode';
 import CodeExampleService from '../../../shared/services/code-examples/CodeExampleService';
-import { Link } from 'react-router-dom';
 
 const AutoConfigAnnotation = (data: { features: Array<Feature> }) => {
     return (
@@ -23,6 +22,18 @@ const AutoConfigAnnotation = (data: { features: Array<Feature> }) => {
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
                         <p className='text-xl text-black dark:text-white'>
                             Through of this annotation we say to context that this application is a Auto Configure Application. With this, the context internally will call to auto configure functions.
+                        </p>
+                        <br />
+                        <p className='text-xl text-black dark:text-white'>
+                            We have two params for this annotation:
+                        </p>
+                        <br />
+                        <p className='text-xl text-black dark:text-white'>
+                            Scan: Let the application know what classes do you want to be scanned automatically, without use the method classesToScan. You need to pass one array of classes
+                        </p>
+                        <br />
+                        <p className='text-xl text-black dark:text-white'>
+                            Filter: Let the application know what classes do you want to be filtered automatically, doing that theses classes are not scanned. You need to pass one array of classes
                         </p>
                         <br />
                         <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'init()' })} />

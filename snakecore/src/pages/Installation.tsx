@@ -4,6 +4,7 @@ import HiddenMenu from '../components/hidden-menu/HiddenMenu';
 import Menu from '../components/menu/Menu';
 import ShowCode from '../components/show-code/ShowCode';
 import CodeExampleService from '../shared/services/code-examples/CodeExampleService';
+import { currentVersion } from '../shared/services/config/ConfigService';
 
 const Installation = (data: { features: [Feature] }) => {
 
@@ -32,7 +33,7 @@ const Installation = (data: { features: [Feature] }) => {
                     </div>
                     <br />
                     <h3 className='text-yellow-300 hover:text-black bg-black hover:bg-yellow-300 text-sm pb-1 font-bold w-44 text-center pt-1 rounded-[5px]'>
-                        <a href="https://central.sonatype.dev/artifact/io.github.marioparrilla/snake-core/0.1.3" target="_blank">
+                        <a href={"https://central.sonatype.dev/artifact/io.github.marioparrilla/snake-core/" + { currentVersion }} target="_blank">
                             Go to Maven Central
                         </a>
                     </h3>

@@ -6,6 +6,7 @@ import Menu from '../components/menu/Menu';
 import HiddenMenu from '../components/hidden-menu/HiddenMenu';
 import ShowCode from '../components/show-code/ShowCode';
 import CodeExampleService from '../shared/services/code-examples/CodeExampleService';
+import { currentVersion } from '../shared/services/config/ConfigService';
 
 const Home = (data: { features: [Feature] }) => {
     return (
@@ -20,7 +21,7 @@ const Home = (data: { features: [Feature] }) => {
                         <h1 className='flex-initial my-auto text-center text-3xl pb-1 font-bold text-black dark:text-white'>
                             SnakeCore
                         </h1>
-                        <Tag ttile='0.1.3' />
+                        <Tag ttile={currentVersion} />
                     </div>
                     <h1 className='sm:text-4xl md:text-5xl lg:text-6xl text-center pb-2 text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
                         SnakeCore an Inversion of control Container Library made to learn.

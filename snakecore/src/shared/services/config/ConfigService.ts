@@ -2,7 +2,7 @@ import CodeExampleService from "../code-examples/CodeExampleService";
 import SectionService from "../sections/SectionService";
 import { initTheme } from "../theme/ThemeService";
 
-export const currentVersion = '0.1.3';
+export const currentVersion = '0.1.4';
 const init = () => {
     initTheme();
     initSections();
@@ -73,7 +73,7 @@ const initCodeExamples = () => {
     });
 
     CodeExampleService.addCodeExample({
-        id: 'init()', example: `@AutoConfig
+        id: 'init()', example: `@AutoConfig(scan = {OneClass.class, OtherClass.class}, filter = {NoUse.class})
 public class Main {
     public static void main(String[] args) throws Exception {
         ApplicationContext context = SnakeApplication

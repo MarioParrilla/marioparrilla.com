@@ -3,6 +3,7 @@ import Social from '../social/Social';
 import { Link } from 'react-router-dom';
 import { Feature } from '../../types/feature';
 import Tag from '../tag/Tag';
+import { currentVersion } from '../../shared/services/config/ConfigService';
 
 const Nav = (data: { features: Array<Feature> }) => {
 
@@ -36,7 +37,7 @@ const Nav = (data: { features: Array<Feature> }) => {
                             <h1 className='my-auto text-center text-xl pb-1 font-bold text-black dark:text-white'>
                                 SnakeCore
                             </h1>
-                            <Tag ttile='0.1.3' />
+                            <Tag ttile={currentVersion} />
                         </Link>
                         <button className="ml-2 w-10 pb-1.5 dark:hover:bg-zinc-700 hover:bg-zinc-400 rounded-full my-5" onClick={changeThemeMode}>
                             {moon}
