@@ -7,7 +7,7 @@ import CodeExampleService from '../../../shared/services/code-examples/CodeExamp
 import { Link } from 'react-router-dom';
 import Buildin from '../../../components/buildIn/Buildin';
 
-const EnableTrace = (data: { features: Array<Feature> }) => {
+const EnableVerboseLogTrace = (data: { features: Array<Feature> }) => {
     return (
         <div className='flex flex-row h-screen bg-white dark:bg-zinc-900'>
             <Nav features={data.features} />
@@ -17,7 +17,7 @@ const EnableTrace = (data: { features: Array<Feature> }) => {
                 <div className='flex flex-col md:px-20 lg:px-20 xl:px-40 sm:px-5 max-sm:px-5'>
                     <h1 className='pt-5 pb-5 sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
                         {
-                            "enableTrace()"
+                            "enableVerboseLogTrace()"
                         }
                     </h1>
                     <br />
@@ -26,7 +26,7 @@ const EnableTrace = (data: { features: Array<Feature> }) => {
                             This method enable your context to be more verbose when is running, giving you more information about what is happening with the context.
                         </p>
                         <br />
-                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'enableTrace()' })} />
+                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'enableVerboseLogTrace()' })} />
                     </div>
                 </div>
             </div>
@@ -34,4 +34,4 @@ const EnableTrace = (data: { features: Array<Feature> }) => {
     );
 }
 
-export default EnableTrace;
+export default EnableVerboseLogTrace;

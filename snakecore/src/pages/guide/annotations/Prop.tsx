@@ -6,7 +6,7 @@ import ShowCode from '../../../components/show-code/ShowCode';
 import CodeExampleService from '../../../shared/services/code-examples/CodeExampleService';
 import { Link } from 'react-router-dom';
 
-const RegisterCests = (data: { features: Array<Feature> }) => {
+const Prop = (data: { features: Array<Feature> }) => {
     return (
         <div className='flex flex-row h-screen bg-white dark:bg-zinc-900'>
             <Nav features={data.features} />
@@ -16,16 +16,18 @@ const RegisterCests = (data: { features: Array<Feature> }) => {
                 <div className='flex flex-col md:px-20 lg:px-20 xl:px-40 sm:px-5 max-sm:px-5'>
                     <h1 className='pt-5 pb-5 sm:text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text font-bold bg-gradient-to-r from-black dark:from-white via-yellow-300 dark:via-yellow-300 to-black dark:to-white animate-text'>
                         {
-                            "registerCestEggsClass()"
+                            "@Prop"
                         }
                     </h1>
                     <br />
                     <div className='w-[50%] sm:w-[100%] max-sm:w-[100%] mb-5'>
                         <p className='text-xl text-black dark:text-white'>
-                            This function through an array with the classes that are the {<Link to='/guide/annotations/cest' className='font-bold inline hover:text-yellow-600'>Cests</Link>} of {<Link to='/guide/annotations/egg' className='font-bold inline hover:text-yellow-600'>Eggs</Link>} of the application are registered in this.
+                            This annotation indicate to the application that need to search and inject by the name of the prop the value into the variable.
                         </p>
                         <br />
-                        <ShowCode lang='java' title='Main.java' code={CodeExampleService.getCodeExample({ id: 'registerCest()' })} />
+                        <ShowCode lang='java' title='Snake.properties' code={CodeExampleService.getCodeExample({ id: 'propFile' })} />
+                        <br />
+                        <ShowCode lang='java' title='Engine.java' code={CodeExampleService.getCodeExample({ id: '@PropExample' })} />
                     </div>
                 </div>
             </div>
@@ -33,4 +35,4 @@ const RegisterCests = (data: { features: Array<Feature> }) => {
     );
 }
 
-export default RegisterCests;
+export default Prop;

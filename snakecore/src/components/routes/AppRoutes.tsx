@@ -8,9 +8,9 @@ import Usage from "../../pages/usage/Usage";
 import SectionService from "../../shared/services/sections/SectionService";
 import Init from "../../pages/guide/functions/Init";
 import Run from "../../pages/guide/functions/Run";
-import RegisterCests from "../../pages/guide/functions/RegisterCests";
+import CestsToScan from "../../pages/guide/functions/cestsToScan";
 import ClassesToScan from "../../pages/guide/functions/ClassesToScan";
-import EnableTrace from "../../pages/guide/functions/EnableTrace";
+import EnableVerboseLogTrace from "../../pages/guide/functions/EnableVerboseLogTrace";
 import GetAllEggs from "../../pages/guide/functions/GetAllEggs";
 import GetEgg from "../../pages/guide/functions/GetEgg";
 import ContainEgg from "../../pages/guide/functions/ContainEgg";
@@ -20,6 +20,9 @@ import Cest from "../../pages/guide/annotations/Cest";
 import AutoConfigAnnotation from "../../pages/guide/annotations/AutoConfig";
 import CustomConstructor from "../../pages/guide/annotations/CustomConstructor";
 import CustomParam from "../../pages/guide/annotations/CustomParam";
+import Prop from "../../pages/guide/annotations/Prop";
+import Configuration from "../../pages/Configuration/Configuration";
+import SnakeConfFile from "../../pages/Configuration/SnakeConfFile";
 
 const AppRoutes = () => {
     return (
@@ -27,6 +30,8 @@ const AppRoutes = () => {
             <Route path='/' element={<Home features={[{ featureTitle: 'Home', sections: SectionService.getSection({ id: 'home' }), activeSectionName: 'Welcome' }]} />} />
             <Route path='/installation' element={<Installation features={[{ featureTitle: 'Installation', sections: SectionService.getSection({ id: 'installation' }), activeSectionName: 'Overview' }]} />} />
             <Route path='/usage' element={<Usage features={[{ featureTitle: 'Usage', sections: SectionService.getSection({ id: 'usage' }), activeSectionName: 'Overview' }]} />} />
+            <Route path='/configuration' element={<Configuration features={[{ featureTitle: 'Configuration', sections: SectionService.getSection({ id: 'config' }), activeSectionName: 'Overview' }]} />} />
+            <Route path='/configuration/snakeConfJson' element={<SnakeConfFile features={[{ featureTitle: 'Configuration', sections: SectionService.getSection({ id: 'config' }), activeSectionName: 'Snake.conf.json' }]} />} />
             <Route path='/usage/autoconfig' element={<AutoConfig features={[{ featureTitle: 'Usage', sections: SectionService.getSection({ id: 'usage' }), activeSectionName: 'Auto configuration' }]} />} />
             <Route path='/usage/manualconfig' element={<ManualConfig features={[{ featureTitle: 'Usage', sections: SectionService.getSection({ id: 'usage' }), activeSectionName: 'Manual configuration' }]} />} />
             <Route path='/guide' element={
@@ -50,10 +55,10 @@ const AppRoutes = () => {
                     { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '' }
                 ]} />}
             />
-            <Route path='/guide/functions/registercesteggsclass' element={
-                <RegisterCests features={[
+            <Route path='/guide/functions/cestsToScan' element={
+                <CestsToScan features={[
                     { featureTitle: 'Guide', sections: SectionService.getSection({ id: 'guide' }), activeSectionName: '' },
-                    { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: 'registerCestEggsClass()' },
+                    { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: 'cestsToScan()' },
                     { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '' }
                 ]} />}
             />
@@ -64,10 +69,10 @@ const AppRoutes = () => {
                     { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '' }
                 ]} />}
             />
-            <Route path='/guide/functions/enabletrace' element={
-                <EnableTrace features={[
+            <Route path='/guide/functions/enableVerboseLogTrace' element={
+                <EnableVerboseLogTrace features={[
                     { featureTitle: 'Guide', sections: SectionService.getSection({ id: 'guide' }), activeSectionName: '' },
-                    { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: 'enableTrace()' },
+                    { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: 'enableVerboseLogTrace()' },
                     { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '' }
                 ]} />}
             />
@@ -118,6 +123,13 @@ const AppRoutes = () => {
                     { featureTitle: 'Guide', sections: SectionService.getSection({ id: 'guide' }), activeSectionName: '' },
                     { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: '' },
                     { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '@AutoConfig' }
+                ]} />}
+            />
+            <Route path='/guide/annotations/prop' element={
+                <Prop features={[
+                    { featureTitle: 'Guide', sections: SectionService.getSection({ id: 'guide' }), activeSectionName: '' },
+                    { featureTitle: 'Functions', sections: SectionService.getSection({ id: 'functions' }), activeSectionName: '' },
+                    { featureTitle: 'Annotations', sections: SectionService.getSection({ id: 'annotations' }), activeSectionName: '@Prop' }
                 ]} />}
             />
             <Route path='/guide/annotations/customconstructor' element={
