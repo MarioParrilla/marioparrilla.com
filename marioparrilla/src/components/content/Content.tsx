@@ -1,5 +1,4 @@
 import Footer from '../footer/Footer';
-import Buildin from '../buildIn/Buildin';
 import mplogo from './../../assets/mp_transparente.png';
 import PersonalCard from '../personalCard/PersonalCard';
 import { getTranslation } from '../../shared/lang/langService';
@@ -28,6 +27,7 @@ import dockerIcon from './../../assets/docker.svg';
 import snakecoreIcon from './../../assets/snakecore.svg';
 import beChefIcon from './../../assets/bechef.svg';
 import mpIcon from './../../assets/mp_transparente.png';
+import deeproutine from './../../assets/deep-routine.png';
 import ProjectCard from '../projectCard/ProjectCard';
 
 const Content = () => {
@@ -60,6 +60,8 @@ const Content = () => {
                 </h1>
                 <div className='flex flex-row flex-wrap space-x-4'>
                     <div></div>
+                    <ProjectCard title='SnakeCore' desc={getTranslation('deeproutine_web')} lang="Angular" web="https://deeproutine.com/" github="https://github.com/MarioParrilla" icon={deeproutine} alt="DeepRoutine" />
+                    <ProjectCard title='SnakeCore' desc={getTranslation('deeproutine')} lang="Spring Boot" web="https://deeproutine.com/" github="https://github.com/MarioParrilla" icon={deeproutine} alt="DeepRoutine" />
                     <ProjectCard title='SnakeCore' desc={getTranslation('snakecore')} lang="Java" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/SnakeCore" icon={snakecoreIcon} alt="SnakeCore" />
                     <ProjectCard title='SnakeCore Website' desc={getTranslation('mpweb')} lang="React" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/snakecore" icon={snakecoreIcon} alt="SnakeCore" />
                     <ProjectCard title='Website' desc={getTranslation('mpweb')} lang="React" web="https://marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/marioparrilla" icon={mpIcon} alt="mpicon" />

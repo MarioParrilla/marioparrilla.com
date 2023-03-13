@@ -12,9 +12,11 @@ export const Translations: { es: lang, en: lang } = {
     projects: "Proyectos",
     nextIdeas: "Aprendiendo",
     visitWeb: "Web",
+    deeproutine: "API Rest usando JWT , con bbdd con MySQL",
+    deeproutine_web: "Pagina Web para crear y planificar tus rutinas del gym",
     snakecore: "Libreria de IoC Container hecha en Java, disponible en Maven/Gradle",
     bechefapp: "App del Proyecto TFG",
-    bechefback: "Backend del Proyecto TFG, que consiste en una API y CMS con JWT",
+    bechefback: "Backend del Proyecto TFG, que consiste en una API Rest y CMS con JWT",
     mpweb: "Pagina web hecha con React junto a Typescript y Tailwind"
   },
   en: {
@@ -28,9 +30,11 @@ export const Translations: { es: lang, en: lang } = {
     projects: "Projects",
     nextIdeas: "Learning",
     visitWeb: "Web",
+    deeproutine: "API Rest using JWT , with db with MySQL",
+    deeproutine_web: "Web for create and plan yours gym routines",
     snakecore: "Library of IoC Container made in Java, avaliable on Maven/Gradle",
     bechefapp: "App of TFG Project",
-    bechefback: "Backend of TFG Project, that has the API and the CMS with JWT",
+    bechefback: "Backend of TFG Project, that has the API Rest and the CMS with JWT",
     mpweb: "Website made with React with Typescript and Tailwind"
   },
 };

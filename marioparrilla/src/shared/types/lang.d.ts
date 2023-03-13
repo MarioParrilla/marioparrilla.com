@@ -9,6 +9,8 @@ export interface lang {
     projects: string,
     nextIdeas: string,
     visitWeb: string,
+    deeproutine: string,
+    deeproutine_web: string,
     snakecore: string,
     bechefapp: string,
     bechefback: string,
