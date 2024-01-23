@@ -62,8 +62,8 @@ const Content = () => {
                     <div></div>
                     <ProjectCard title='SnakeCore' desc={getTranslation('deeproutine_web')} lang="Angular" web="https://deeproutine.com/" github="https://github.com/MarioParrilla" icon={deeproutine} alt="DeepRoutine" />
                     <ProjectCard title='SnakeCore' desc={getTranslation('deeproutine')} lang="Spring Boot" web="https://deeproutine.com/" github="https://github.com/MarioParrilla" icon={deeproutine} alt="DeepRoutine" />
-                    <ProjectCard title='SnakeCore' desc={getTranslation('snakecore')} lang="Java" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/SnakeCore" icon={snakecoreIcon} alt="SnakeCore" />
-                    <ProjectCard title='SnakeCore Website' desc={getTranslation('mpweb')} lang="React" web="https://snakecore.marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/snakecore" icon={snakecoreIcon} alt="SnakeCore" />
+                    <ProjectCard title='SnakeCore' desc={getTranslation('snakecore')} lang="Java" web="https://https://snakecore.vercel.app/" github="https://github.com/MarioParrilla/SnakeCore" icon={snakecoreIcon} alt="SnakeCore" />
+                    <ProjectCard title='SnakeCore Website' desc={getTranslation('mpweb')} lang="React" web="https://https://snakecore.vercel.app/" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/snakecore" icon={snakecoreIcon} alt="SnakeCore" />
                     <ProjectCard title='Website' desc={getTranslation('mpweb')} lang="React" web="https://marioparrilla.com" github="https://github.com/MarioParrilla/marioparrilla.com/tree/main/marioparrilla" icon={mpIcon} alt="mpicon" />
                     <ProjectCard title='BeChef Backend' desc={getTranslation('bechefback')} lang="Spring Boot" github="https://github.com/MarioParrilla/BeChefBackend" icon={beChefIcon} alt="bechef" />
                     <ProjectCard title='BeChef App' desc={getTranslation('bechefapp')} lang="Flutter" github="https://github.com/MarioParrilla/BeChef" icon={beChefIcon} alt="bechef" />
